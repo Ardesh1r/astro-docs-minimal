@@ -1,7 +1,7 @@
 {
   "name": "@ardesh1r/astro-docs-minimal",
   "version": "1.0.0",
-  "description": "A minimal, clean documentation theme for Astro. Perfect for technical documentation, API docs, and knowledge bases.",
+  "description": "Minimal, fast documentation theme for Astro. Build beautiful technical docs, API documentation, and knowledge bases with dark mode, responsive design, and zero configuration.",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -17,7 +17,19 @@
     "minimal",
     "clean",
     "responsive",
-    "withastro"
+    "withastro",
+    "api-documentation",
+    "knowledge-base",
+    "technical-docs",
+    "dark-mode",
+    "tailwind-css",
+    "markdown",
+    "static-site-generator",
+    "ssg",
+    "jamstack",
+    "fast",
+    "performance",
+    "accessible"
   ],
   "homepage": "https://ardeshirshojaei.com",
   "repository": {
