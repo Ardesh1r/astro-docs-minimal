@@ -1,6 +1,6 @@
 {
-  "name": "astro-docs-minimal",
-  "version": "1.0.2",
+  "name": "@ardesh1r/astro-docs-minimal",
+  "version": "1.0.0",
   "description": "A minimal, clean documentation theme for Astro. Perfect for technical documentation, API docs, and knowledge bases.",
   "type": "module",
   "scripts": {
