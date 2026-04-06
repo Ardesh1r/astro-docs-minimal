@@ -16,8 +16,17 @@
     "docs",
     "minimal",
     "clean",
-    "responsive"
+    "responsive",
+    "withastro"
   ],
+  "homepage": "https://ardeshirshojaei.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ardesh1r/astro-docs-minimal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ardesh1r/astro-docs-minimal/issues"
+  },
   "author": "Ardeshir Shojaei",
   "license": "MIT",
   "dependencies": {
