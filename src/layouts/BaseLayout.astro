@@ -1,0 +1,44 @@
+---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+interface Props {
+  title: string
+  description?: string
+}
+
+const { title, description = 'Documentation' } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <Header title="Documentation" />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  code {
+    @apply rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm dark:bg-gray-800;
+  }
+
+  pre code {
+    @apply bg-transparent px-0 py-0;
+  }
+</style>

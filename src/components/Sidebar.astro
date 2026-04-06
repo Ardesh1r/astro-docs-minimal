@@ -1,0 +1,39 @@
+---
+interface NavItem {
+  label: string
+  href: string
+  children?: NavItem[]
+}
+
+const navigation: NavItem[] = [
+  { label: 'Getting Started', href: '/docs/getting-started' },
+  { label: 'Installation', href: '/docs/installation' },
+  { label: 'Configuration', href: '/docs/configuration' },
+  { label: 'Usage', href: '/docs/usage' },
+  { label: 'API Reference', href: '/docs/api-reference' },
+  { label: 'Examples', href: '/docs/examples' },
+  { label: 'FAQ', href: '/docs/faq' },
+]
+
+const currentPath = Astro.url.pathname
+---
+
+<aside
+  id="sidebar"
+  class="hidden fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 overflow-y-auto border-r border-gray-200 bg-gray-50 px-4 py-6 dark:border-gray-800 dark:bg-gray-950 md:block"
+>
+  <nav class="space-y-1">
+    {navigation.map((item) => (
+      <a
+        href={item.href}
+        class={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+          currentPath === item.href
+            ? 'bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100'
+            : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+        }`}
+      >
+        {item.label}
+      </a>
+    ))}
+  </nav>
+</aside>

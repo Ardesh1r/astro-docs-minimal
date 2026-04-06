@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout title="Documentation" description="Welcome to our documentation">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
+        Welcome to Documentation
+      </h1>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
+        A minimal, clean documentation theme for Astro. Get started by exploring the guides below.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <a
+        href="/docs/getting-started"
+        class="rounded-lg border border-gray-200 p-6 hover:border-blue-500 hover:shadow-lg dark:border-gray-800 dark:hover:border-blue-500 transition-all"
+      >
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Getting Started</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-400">
+          Learn how to get started with this documentation theme.
+        </p>
+      </a>
+
+      <a
+        href="/docs/installation"
+        class="rounded-lg border border-gray-200 p-6 hover:border-blue-500 hover:shadow-lg dark:border-gray-800 dark:hover:border-blue-500 transition-all"
+      >
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Installation</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-400">
+          Step-by-step instructions to install and set up.
+        </p>
+      </a>
+
+      <a
+        href="/docs/configuration"
+        class="rounded-lg border border-gray-200 p-6 hover:border-blue-500 hover:shadow-lg dark:border-gray-800 dark:hover:border-blue-500 transition-all"
+      >
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Configuration</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-400">
+          Configure the theme to match your needs.
+        </p>
+      </a>
+
+      <a
+        href="/docs/usage"
+        class="rounded-lg border border-gray-200 p-6 hover:border-blue-500 hover:shadow-lg dark:border-gray-800 dark:hover:border-blue-500 transition-all"
+      >
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Usage</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-400">
+          Learn how to use the theme effectively.
+        </p>
+      </a>
+
+      <a
+        href="/docs/api-reference"
+        class="rounded-lg border border-gray-200 p-6 hover:border-blue-500 hover:shadow-lg dark:border-gray-800 dark:hover:border-blue-500 transition-all"
+      >
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">API Reference</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-400">
+          Complete API documentation and reference.
+        </p>
+      </a>
+
+      <a
+        href="/docs/examples"
+        class="rounded-lg border border-gray-200 p-6 hover:border-blue-500 hover:shadow-lg dark:border-gray-800 dark:hover:border-blue-500 transition-all"
+      >
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Examples</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-400">
+          Practical examples and use cases.
+        </p>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

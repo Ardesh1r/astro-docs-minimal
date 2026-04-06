@@ -1,0 +1,40 @@
+---
+interface Heading {
+  depth: number
+  text: string
+  slug: string
+}
+
+interface Props {
+  headings: Heading[]
+}
+
+const { headings } = Astro.props
+
+const toc = headings
+  .filter((heading) => heading.depth > 1 && heading.depth < 4)
+  .map((heading) => ({
+    ...heading,
+    indent: heading.depth - 2,
+  }))
+---
+
+{toc.length > 0 && (
+  <aside class="hidden xl:block fixed right-0 top-16 h-[calc(100vh-4rem)] w-64 overflow-y-auto px-4 py-6">
+    <div class="text-sm font-semibold text-gray-900 dark:text-white mb-4">On this page</div>
+    <nav class="space-y-2">
+      {toc.map((item) => (
+        <a
+          href={`#${item.slug}`}
+          class={`block text-sm transition-colors hover:text-blue-600 dark:hover:text-blue-400 ${
+            item.indent === 0
+              ? 'text-gray-700 dark:text-gray-300'
+              : 'ml-4 text-gray-600 dark:text-gray-400'
+          }`}
+        >
+          {item.text}
+        </a>
+      ))}
+    </nav>
+  </aside>
+)}
